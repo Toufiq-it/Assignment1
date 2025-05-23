@@ -2,46 +2,30 @@
 
 Q1=> What are some differences between interfaces and types in TypeScript?
 answer=>
+Interface : 
+1) Interface একাধিকবার একই নামে declar করে একত্রে কাজ করা যায়। 
+2) Interface মূলত object , class গঠন এ  বেশি ব্যবহৃত হয়। 
+3) Interface সহজভাবে অন্য interface থেকে extends করে নতুন interface তৈরি করা যায়। 
+4) Interface এর flaxibility সীমিত , তবে object এর ক্ষেত্রে বেশি flexible । 
+5) Interface class গঠনে বেশি উপকারী , ক্লাস সরাসরি একটি interface implement করতে পারে। 
+6) সাধারণত interface গুলো বেশি Readability হয়। 
 
-interface:
-
-1.Object-এর জন্য ভালোভাবে ডিজাইন করা হয়েছে , সাধারণত ক্লাস বা অবজেক্ট স্ট্রাকচার তৈরি করতে ব্যবহৃত হয়।
-
-2.Extends করা যায়, একাধিক interface থেকে extend করে বড় structure তৈরি করা যায়।
-
-3.Re-declaration করা যায়, একই interface বারবার ডিক্লেয়ার করলে TypeScript সেগুলো merge করে ফেলে।
-
-4.Class-এ implements করা যায়, interface সহজেই class দ্বারা implement করা যায়।
-
-5.Performance — বড় কোডবেসে interface কম্পাইলারে একটু বেশি পারফর্ম করে।
+Type : 
+1) Type একবার declar করা যায়, বারবার একই নামে declar করা যায় না। 
+2) Type শুধু object নয়, এটি primitive type (number, string) , unions , tuples ইত্যাদি define করা যায়। 
+3) Type ব্যবহার করে extends করা যায় , কিন্তু তা করতে হয়  intersection (&) ব্যবহার করে। 
+4) Type অনেক বেশি flexible , বিভিন্ন ধরনের type একত্রিত করে জটিল টাইপ তৈরি করা যায়। 
+5) Type এর readability interface এর তুলনায় কম , তবে টাইপ বেশি flexible ।
 
 
-type:
-
-1.Flexible — শুধু object না, function, union, intersection, tuple ইত্যাদিও define করা যায়।
-
-2.Extends এর বদলে intersection & ব্যবহার করতে হয় structure মেশাতে।
-
-3.Re-declare করা যায় না, একবার declare করার পর আবার একই নামে করলে error দেয়।
-
-4.Class-এ সরাসরি implements করা যায় না (তবে object shape হলে করা যায়)।
-
-5.Advanced Type Features — mapped types, conditional types ইত্যাদি ব্যবহার হয়।
 
 
 Q5.What is type inference in TypeScript? Why is it helpful?
 
-ans: Type Inference হচ্ছে TypeScript-এর একটি বৈশিষ্ট্য, যেখানে টাইপ স্পষ্টভাবে না লিখলেও TypeScript নিজে থেকে type অনুমান করে নেয়।
+answer: 
+Type inference হলো TypeScript এর একধরনের type বা বৈশিষ্ট্য , যেখানে টাইপ স্পষ্টভাবে না লিখা হলে TypeScript নিজে থেকে টাইপ অনুমান করে নেয়। 
 
-Why is it helpful?
-কম কোড লিখে টাইপের সুবিধা পাওয়া যায় |
-->টাইপ না লিখেও IntelliSense, অটো-কমপ্লিশন, ও টাইপ চেকিং কাজ করে।
-
-ক্লিন ও সহজে বোঝা যায় এমন কোড |
-->বারবার টাইপ না লিখে কোড পরিষ্কার থাকে।
-
-টাইপ ভুল ধরতে সাহায্য করে |
-->ভুল টাইপ ব্যবহারে TypeScript নিজে থেকে warning দেয়।
-
-দ্রুত ডেভেলপমেন্টে সাহায্য করে |
--> IDE গুলো টাইপ inference ব্যবহার করে smart suggestions দেয়।
+Why is it helpful ?
+1) কম কোড লিখে কাজ করা যায় , বারবার টাইপ ডিক্লেয়ার করতে হয় না। 
+2) টাইপ ভুল ধরতে সাহায্য করে , ভুল টাইপ ব্যবহারে TypeScript নিজে থেকে warning দেয়। 
+3) ভুল টাইপ ব্যবহারে সম্ভাবনা কমে ফলে বাগ ও কম হয়।
