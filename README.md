@@ -1,7 +1,8 @@
 ## Assignment 01
 
-Q1=> What are some differences between interfaces and types in TypeScript?
-answer=>
+* Q1=> What are some differences between interfaces and types in TypeScript?
+
+answer=> 
 Interface : 
 1) Interface একাধিকবার একই নামে declar করে একত্রে কাজ করা যায়। 
 2) Interface মূলত object , class গঠন এ  বেশি ব্যবহৃত হয়। 
@@ -19,8 +20,7 @@ Type :
 
 
 
-
-Q5.What is type inference in TypeScript? Why is it helpful?
+* Q5.What is type inference in TypeScript? Why is it helpful?
 
 answer: 
 Type inference হলো TypeScript এর একধরনের type বা বৈশিষ্ট্য , যেখানে টাইপ স্পষ্টভাবে না লিখা হলে TypeScript নিজে থেকে টাইপ অনুমান করে নেয়। 
