@@ -19,9 +19,15 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
 //3 
 
 function concatenateArrays<T>(...arrays: T[][]): T[]{
-    const singleArray = arrays.flat();
-    return singleArray;
-}
+    let result: T[] = [];
+
+    for (const array of arrays) {
+    result = result.concat(array);
+    }
+    return result;
+};
+
+
 
 //4
 
@@ -55,7 +61,7 @@ class Car extends Vehicle {
 const myCar = new Car("Toyota", 2020, "Corolla");
 const x = myCar.getInfo();   
 const y = myCar.getModel();
-// console.log(x);
+
 
 
 //5
@@ -75,7 +81,7 @@ function processValue(value: string | number): number{
 interface Product {
     name: string;
     price: number;
-  }
+  };
   
 function getMostExpensiveProduct(products: Product[]): Product | null{
     if (products.length === 0) {
@@ -88,12 +94,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null{
     return MostExpensiveProduct;
 };
 
-const products = [
-    { name: "Pen", price: 10 },
-    { name: "Notebook", price: 25 },
-    { name: "Bag", price: 50 }
-  ];
-  
  
 
 //7
